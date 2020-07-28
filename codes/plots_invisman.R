@@ -3,7 +3,7 @@ library(wordcloud)
 
 # Bar graph for most 10 frequent occuring words
 frequency %>% top_n(10) %>% mutate(word=reorder(word,n))%>% ggplot(aes(word,n))+geom_col()+xlab("Words")+ylab("Frequency")+coord_flip()
-ggsave("Top_10frequentword",)
+
 
 
 # Word cloud
